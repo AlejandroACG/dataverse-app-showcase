@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/javafx/fxml"
+            fx:controller="com.alejandroacg.dataverseappshowcase.controllers.forms.FranchiseFormController"
+            fitToWidth="true"
+            fitToHeight="true">
+    <StackPane fx:id="rootStack">
+        <VBox spacing="12" prefWidth="600" alignment="TOP_CENTER" styleClass="vbox">
+            <Label fx:id="formTitle" text="New Franchise" styleClass="title" />
+
+            <Label text="Image" />
+            <HBox spacing="8" alignment="CENTER">
+                <Button fx:id="browse" onAction="#onBrowseImage">
+                    <graphic>
+                        <StackPane styleClass="image-container" fx:id="imageContainer"
+                                   prefWidth="120" prefHeight="120"
+                                   maxHeight="200" maxWidth="200">
+                            <ImageView fx:id="imagePreview" preserveRatio="true" />
+                        </StackPane>
+                    </graphic>
+                </Button>
+            </HBox>
+            <Button text="Delete Image" onAction="#onDeleteImage" styleClass="danger" />
+
+            <Label text="English Name"/>
+            <TextField fx:id="englishNameField" promptText="Enter English name" />
+            <HBox alignment="CENTER_RIGHT">
+                <Label fx:id="englishNameCounterLabel" text="0 / 100" style="-fx-font-size: 11; -fx-text-fill: gray;" />
+            </HBox>
+
+            <Label text="Original Name"/>
+            <TextField fx:id="originalNameField" promptText="Enter original name" />
+            <HBox alignment="CENTER_RIGHT">
+                <Label fx:id="originalNameCounterLabel" text="0 / 100" style="-fx-font-size: 11; -fx-text-fill: gray;" />
+            </HBox>
+
+            <Label text="Description" />
+            <TextArea fx:id="descriptionField"
+                      promptText="Write a short description..."
+                      prefRowCount="6" wrapText="true" minHeight="140" />
+            <HBox alignment="CENTER_RIGHT">
+                <Label fx:id="descriptionCounterLabel" text="0 / 1000" style="-fx-font-size: 11; -fx-text-fill: gray;" />
+            </HBox>
+
+            <Button fx:id="saveFranchiseButton" text="Save Franchise" onAction="#onSaveFranchise" />
+        </VBox>
+    </StackPane>
+</ScrollPane>

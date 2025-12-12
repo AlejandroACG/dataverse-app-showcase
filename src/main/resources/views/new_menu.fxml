@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.alejandroacg.dataverseappshowcase.controllers.NewMenuController"
+            fitToWidth="true"
+            fitToHeight="true">
+
+    <VBox spacing="20" alignment="TOP_CENTER" styleClass="vbox">
+        <Label text="New" styleClass="title" />
+
+        <GridPane hgap="20" vgap="20" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33" />
+                <ColumnConstraints percentWidth="33" />
+                <ColumnConstraints percentWidth="33" />
+            </columnConstraints>
+
+            <Button text="Franchise" onAction="#onOpenFranchiseForm"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0" maxWidth="Infinity" GridPane.hgrow="ALWAYS" />
+            <Button text="Genre" onAction="#onOpenGenreForm"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1" maxWidth="Infinity" GridPane.hgrow="ALWAYS" />
+        </GridPane>
+    </VBox>
+</ScrollPane>

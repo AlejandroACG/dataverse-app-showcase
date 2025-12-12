@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.alejandroacg.dataverseappshowcase.controllers.MainController">
+    <left>
+        <VBox spacing="10" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+
+            <Label text="DATAVERSE" styleClass="title" />
+
+            <Button text="New" fx:id="newButton" onAction="#onNewMenu"
+                    maxWidth="Infinity" GridPane.hgrow="ALWAYS" styleClass="accent" />
+
+            <ScrollPane fx:id="navScrollPane" fitToWidth="true">
+                <VBox spacing="5" VBox.vgrow="ALWAYS">
+                    <Button text="Franchises" fx:id="searchFranchisesButton" onAction="#onSearchFranchises"
+                            maxWidth="Infinity" GridPane.hgrow="ALWAYS" />
+                    <Button text="Genres" fx:id="searchGenresButton" onAction="#onSearchGenres"
+                            maxWidth="Infinity" GridPane.hgrow="ALWAYS" />
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </left>
+
+    <center>
+        <TabPane fx:id="tabPane" />
+    </center>
+</BorderPane>

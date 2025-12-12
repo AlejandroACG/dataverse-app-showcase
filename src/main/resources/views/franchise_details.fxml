@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.alejandroacg.dataverseappshowcase.controllers.details.FranchiseDetailsController"
+            fx:id="detailsPane">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <top>
+        <VBox>
+            <VBox spacing="4">
+                <Label fx:id="englishNameLabel" style="-fx-font-size: 20px; -fx-font-weight: bold;" wrapText="true" />
+                <Label fx:id="originalNameLabel" style="-fx-font-size: 13px; -fx-text-fill: #555;" wrapText="true" />
+            </VBox>
+            <HBox spacing="10">
+                <Button fx:id="editButton" text="Edit" onAction="#onEditFranchise" />
+                <Button fx:id="deleteButton" text="Delete" onAction="#onDeleteFranchise" styleClass="danger" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox spacing="10">
+                <HBox spacing="20">
+                    <StackPane styleClass="image-container"
+                               prefWidth="120" prefHeight="120"
+                               maxHeight="200" maxWidth="200">
+                        <ImageView fx:id="franchiseImage" fitWidth="200" fitHeight="300" preserveRatio="true" />
+                    </StackPane>
+
+                    <Label fx:id="descriptionLabel" wrapText="true" />
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

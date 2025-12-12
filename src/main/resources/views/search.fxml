@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.alejandroacg.dataverseappshowcase.controllers.SearchController"
+            fx:id="rootPane">
+
+    <top>
+        <VBox fx:id="filterBox" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+        </VBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="centerStack">
+            <VBox>
+                <ScrollPane fitToWidth="true">
+                    <TilePane fx:id="resultsPane"
+                              hgap="20" vgap="20"
+                              prefColumns="4"
+                              tileAlignment="TOP_LEFT"
+                              prefWidth="Infinity">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10" />
+                        </padding>
+                    </TilePane>
+                </ScrollPane>
+
+                <HBox fx:id="paginationBox" spacing="8" alignment="CENTER">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10" />
+                    </padding>
+                </HBox>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

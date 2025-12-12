@@ -1,0 +1,61 @@
+VBox {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 20;
+}
+
+ScrollPane {
+    -fx-background-color: #2b2b2b;
+}
+
+ScrollPane .viewport {
+    -fx-background-color: #2b2b2b;
+}
+
+StackPane {
+    -fx-background-color: #2b2b2b;
+}
+
+Label.title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.image-container {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #555;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 10;
+}
+
+.tag-container {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #333333;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 2;
+}
+
+.check-box {
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: #2a2a2a;
+    -fx-border-color: #777;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 3;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #007acc;
+    -fx-border-color: #007acc;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
